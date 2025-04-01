@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= Dex.name %> Detail Page</title>
+  </head>
+  <body>
+    <h1><%= Dex.name %></h1>
+
+        <p>
+        <%= Dex.type %>
+        </p>
+        
+        <% if (Dex.canEvolve) { %>
+            <p>This Pokemon can evolve!</p>
+            <% } else { %>
+            <p>This Pokemon does not evolve!</p>
+            <% } %>
+
+        <form action="/pokedex/<%=Dex._id%>?_method=DELETE" method="POST">
+            <button type="submit">Delete <%= Dex.name %></button>
+        </form>
+
+        <a href="/pokedex/<%= Dex._id %>/edit">Edit <%= Dex.name %></a>
+        
+            <a href='/pokedex/'>Back to Seen Pokemon</a>
+  </body>
+</html>

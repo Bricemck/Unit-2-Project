@@ -1,0 +1,20 @@
+<!-- views/fruits/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seen Pokemon</title>
+  </head>
+  <body>
+    <h1>Seen Pokemon</h1>
+    <ul>
+        <% Dex.forEach(Dex => { %>
+            <li><a href="/pokedex/<%= Dex._id %>"><%= Dex.name %></a></li>
+        <% }); %>
+    </ul>
+
+    <a href="/pokedex/new">Register a new Pokemon</a>
+  </body>
+</html>
