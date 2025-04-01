@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit <% Dex.name %></title>
+    <title>Edit <% dexCon.name %></title>
 </head>
 <body>
-    <h1>Edit <% Dex.name %></h1>
-    <form action="/pokedex/<%=Dex._id%>?_method=PUT" method="POST">
+    <h1>Edit <% dexCon.name %></h1>
+    <form action="/pokedex/<%=dexCon._id%>?_method=PUT" method="POST">
         <label for="name">Name:</label>
-        <input type="text" name="name" value="<%= Dex.name %>" />
+        <input type="text" name="name" value="<%= dexCon.name %>" />
 
         <label for="type">Type</label>
-        <input type="text" name="type" value="<%= Dex.type %>" />
+        <input type="text" name="type" value="<%= dexCon.type %>" />
 
         <label for="canEvolve">Can Evolve?</label>
-        <input type="checkbox" name="canEvolve" <% if (Dex.canEvolve) { %>checked<% } %> >
+        <input type="checkbox" name="canEvolve" <% if (dexCon.canEvolve) { %>checked<% } %> >
 
         <button type="submit">Update Pokemon</button>
     </form>
