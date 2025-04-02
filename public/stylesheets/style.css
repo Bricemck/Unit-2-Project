@@ -1,0 +1,62 @@
+/* Press Start Player 2 Font gives the app's text a 'gameboy feel' */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* h1 & p are elements, not classes and don't need the preceeding . */
+h1 {
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+}
+
+p {
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+}
+
+/* . indicates this is an image class */
+.pika {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-radius: 5%;
+}
+
+/* Tested some bootstrap classes.  Specifically the nav links. */
+/* Added pokeball colors to fit the theme. */
+
+.custom-bg {
+    background-color: #ee1515; /* Red background */
+}
+
+/* Default link styles */
+.custom-nav-link {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #f0f0f0; /* Light gray text */
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover and Active state */
+.custom-nav-link:hover,
+.custom-nav-link.active {
+    background-color: #f0f0f0 !important; /* Light gray background */
+    color: #222224 !important; /* Dark gray text */
+    border-color: #f0f0f0;
+}
+
+/* Optional: Adjust spacing and rounding */
+.nav-item {
+    margin: 0 5px;
+}

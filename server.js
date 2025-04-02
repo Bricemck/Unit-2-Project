@@ -5,6 +5,7 @@ const express = require('express');
 const mongoose = require('mongoose')
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const path = require("path");
 
 // Load Express & Mongoose
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride("_method")); 
 app.use(morgan("dev")); 
+app.use(express.static(path.join(__dirname, "public")));
 
 //Controller functions
 const dexCtrl = require('./controllers/pokedex');
